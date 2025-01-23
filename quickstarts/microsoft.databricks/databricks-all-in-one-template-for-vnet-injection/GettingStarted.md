@@ -1,6 +1,6 @@
-# Deploy a Network Security Group, a Virtual Network and an Azure Databricks Workspace with the Virtual Network
+# Deploy a Network Security Group, a Virtual Network, a NAT gateway and an Azure Databricks Workspace with the Virtual Network
 
-The purpose of this ARM Template is **Deploy a Network Security Group, a Virtual Network and an Azure Databricks Workspace with the Virtual Network** inserting a few parameters.
+The purpose of this ARM Template is **Deploy a Network Security Group, a Virtual Network, a NAT gateway and an Azure Databricks Workspace with the Virtual Network** inserting a few parameters.
 
 ## The Template
 
@@ -13,7 +13,7 @@ Parameter         | Suggested value     | Description
 **WorkspaceName** |  | The name of your DataBricks Workspace.
 **Pricing Tier** | 14 Day Trial, Standard or Premium
 **Resource Group** The Resource Group which you wish to deploy your DataBricks Environment. 
-**Disable Public Ip** | Default is false | Set this to true to disable Public IP creation.
+**Disable Public Ip** | Default is true | Set this to false to disable Public IP creation.
 
 All the other parameters can be left as default.
 
@@ -25,11 +25,13 @@ All the other parameters can be left as default.
 **Vnet Cidr** Cidr Range of the Vnet
 **Private Subnet Cidr** Cidr Range of the Private Subnet
 **Public Subnet Cidr** Cidr Range of the Public Subnet
+**NAT Gateway Name** Name of the NAT Gateway
+**NAT Gateway Public IP Name** Name of the NAT Gateway Public IP
 
 ## Deployment
 
 There are a few ways to deploy this template.
-You can use [PowerShell](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy), [Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-cli), [Azure Portal](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-portal) or your favorite SDK.
+You can use [PowerShell](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-template-deploy), [Azure CLI](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-template-deploy-cli), [Azure Portal](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-template-deploy-portal) or your favorite SDK.
 
 For Azure CLI I'm using the Visual Code with Azure CLI extensions. If you would like you can find more information [here](https://code.visualstudio.com/docs/azure/extensions). But bare in mind that you don't need to use the Visual Code app, you can stick with the always present **Command Line** on Windows or the Linux **bash terminal**.
 
